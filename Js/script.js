@@ -1,43 +1,56 @@
-//desplazamiento suave
-document.querySelectorAll('a[href^="#"]').forEach(enlace => {
-  enlace.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-/*que se repita este script*/
+// Desplazamiento suave para los anclajes internos
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
 
-document.addEventListener("DOMContentLoaded", function() {
-    const text = "Instituto Tecnológico de Administración de Empresas - San Pedro Sula";
-    const speed = 80; // velocidad en ms (ajusta para más lento o más rápido)
-    let i = 0;
+smoothLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+        const targetId = link.getAttribute('href');
 
-    function typeWriter() {
-        if (i < text.length) {
-            document.getElementById("typewriter").textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
+        if (targetId && targetId !== '#') {
+            event.preventDefault();
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
         }
-    }
-
-    typeWriter();
+    });
 });
 
+// Animación de escritura para el titular principal
+document.addEventListener('DOMContentLoaded', () => {
+    const text = 'Impulsamos el talento tecnológico de Honduras';
+    const speed = 70;
+    let index = 0;
+    const typewriter = document.getElementById('typewriter');
 
-// const slides = document.querySelector('.slides');
-// const prevBtn = document.querySelector('.prev');
-// const nextBtn = document.querySelector('.next');
-// let index = 0;
+    if (!typewriter) return;
 
-// function showSlide(i) {
-//   index = (i + 3) % 3; // 3 imágenes, ajusta según tu cantidad
-//   slides.style.transform = `translateX(-${index * 100}%)`;
-// }
+    typewriter.textContent = '';
 
-// nextBtn.addEventListener('click', () => showSlide(index + 1));
-// prevBtn.addEventListener('click', () => showSlide(index - 1));
+    (function type() {
+        if (index < text.length) {
+            typewriter.textContent += text.charAt(index);
+            index += 1;
+            setTimeout(type, speed);
+        }
+    })();
+});
 
-// // Reproducción automática cada 5s
-// setInterval(() => showSlide(index + 1), 5000);
+// Control del menú móvil
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+
+if (navToggle && navList) {
+    navToggle.addEventListener('click', () => {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!isExpanded));
+        navList.classList.toggle('nav-open');
+    });
+
+    navList.querySelectorAll('a').forEach((anchor) => {
+        anchor.addEventListener('click', () => {
+            navToggle.setAttribute('aria-expanded', 'false');
+            navList.classList.remove('nav-open');
+        });
+    });
+}

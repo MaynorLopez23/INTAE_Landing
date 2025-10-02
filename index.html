@@ -4,112 +4,319 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INTAE-SPS</title>
-    <link rel="icon" type="image/x-icon" href="Img/Logo_Intae.png" />
-    <link rel="stylesheet" href="CSS/styles.css" />
-<script src="js/script.js" defer></script>
+    <meta name="description"
+        content="Instituto Tecnológico de Administración de Empresas - San Pedro Sula. Formación técnica y bachilleratos orientados a la empresa, tecnología y turismo." />
+    <title>INTAE-SPS | Instituto Tecnológico de Administración de Empresas</title>
+    <link rel="icon" type="image/svg+xml" href="Img/Logo_Intae.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Css/styles.css" />
+    <script src="Js/script.js" defer></script>
 </head>
 
 <body>
     <header class="header">
-        <nav class="navbar">
-            <a href="#hero" class="logo"><img src="Img/Logo_Intae.png" alt="Logo INTAE-SPS" />
+        <nav class="navbar container" aria-label="Principal">
+            <a href="#hero" class="logo" aria-label="Inicio INTAE-SPS">
+                <img src="Img/Logo_Intae.svg" alt="Logo del Instituto Tecnológico de Administración de Empresas" />
             </a>
-
-            <ul class="nav-list">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+                <span class="nav-toggle__line"></span>
+                <span class="visually-hidden">Abrir menú</span>
+            </button>
+            <ul class="nav-list" id="primary-menu">
+                <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#oferta">Oferta académica</a></li>
                 <li><a href="#admisiones">Admisiones</a></li>
-                <li><a href="#noticias">Noticias y Eventos</a></li>
+                <li><a href="#noticias">Noticias y eventos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main class="main-content">
-        <section class="hero-section">
-            <div class="hero" id="hero">
-                <h1 id="typewriter">
-                    <!-- Instituto Tecnológico de Administración de Empresas - San Pedro Sula -->
-                </h1>
-            </div>
-            <div class="nosotros" id="nosotros">
-                <h2>Nosotros</h2>
-                <p>
-                    Bienvenidos al Instituto Tecnológico de Administración de Empresas -
-                    San Pedro Sula. Nuestra misión es ofrecer una educación de calidad
-                    que prepare a nuestros estudiantes para el éxito en el mundo
-                    empresarial.
-                </p>
-                <div class="mision-vision">
-                    <div class="mision">
-                        <h2>Misión</h2>
-                        <p>
-                            Nuestra misión es formar profesionales competentes, éticos y
-                            comprometidos con el desarrollo sostenible de la sociedad.
-                        </p>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container hero__layout">
+                <div class="hero-content">
+                    <p class="hero-eyebrow">Instituto Tecnológico de Administración de Empresas - San Pedro Sula</p>
+                    <h1 class="hero-title" id="typewriter" aria-live="polite"></h1>
+                    <p class="hero-description">
+                        Formamos bachilleres técnicos y científicos que lideran proyectos innovadores en las empresas e industrias
+                        más dinámicas del país. Impulsamos el pensamiento emprendedor, las habilidades digitales y el compromiso
+                        social de nuestra comunidad educativa.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#oferta">Conoce la oferta académica</a>
+                        <a class="btn btn-secondary" href="#admisiones">Agenda tu visita</a>
                     </div>
-                    <div class="vision">
-                        <h2>Visión</h2>
-                        <p>
-                            Nuestra visión es ser un instituto líder en la formación técnica
-                            y profesional, reconocido por la calidad de su educación y el
-                            éxito de sus egresados.
-                        </p>
+                    <dl class="hero-stats" aria-label="Logros del instituto">
+                        <div>
+                            <dt>+35 años</dt>
+                            <dd>de trayectoria educativa en Honduras</dd>
+                        </div>
+                        <div>
+                            <dt>+5,000</dt>
+                            <dd>egresados liderando empresas y emprendimientos</dd>
+                        </div>
+                        <div>
+                            <dt>95%</dt>
+                            <dd>de empleabilidad al primer año de graduación</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="nosotros">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Nosotros</span>
+                    <h2 class="section-title">Educación técnica con visión empresarial</h2>
+                    <p class="section-description">
+                        Somos una institución enfocada en el desarrollo de talentos orientados a la gestión, la innovación y la
+                        transformación digital. Nuestra propuesta educativa integra formación académica sólida, proyectos reales y
+                        alianzas estratégicas con la industria.
+                    </p>
+                </div>
+                <div class="about-grid">
+                    <figure class="about-image">
+                        <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
+                            alt="Estudiantes colaborando en un aula de tecnología" loading="lazy" />
+                        <figcaption>Laboratorios modernos y espacios colaborativos que estimulan el aprendizaje práctico.</figcaption>
+                    </figure>
+                    <div class="about-content">
+                        <div class="mission-vision">
+                            <article class="card">
+                                <h3>Misión</h3>
+                                <p>
+                                    Formar profesionales competentes, éticos y comprometidos con el desarrollo sostenible de Honduras,
+                                    a través de experiencias educativas significativas y centradas en la práctica.
+                                </p>
+                            </article>
+                            <article class="card">
+                                <h3>Visión</h3>
+                                <p>
+                                    Ser el instituto líder en formación técnica y empresarial de la región norte, reconocido por la calidad de
+                                    sus egresados y su impacto en el ecosistema productivo.
+                                </p>
+                            </article>
+                        </div>
+                        <div class="values">
+                            <h3>Nuestros pilares</h3>
+                            <ul class="values-list">
+                                <li><i class="fa-solid fa-lightbulb"></i> Innovación aplicada a la empresa y la industria.</li>
+                                <li><i class="fa-solid fa-handshake-angle"></i> Vinculación constante con el sector productivo.</li>
+                                <li><i class="fa-solid fa-globe"></i> Formación bilingüe y competencias globales.</li>
+                                <li><i class="fa-solid fa-people-group"></i> Comunidad inclusiva con enfoque humano.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="oferta" id="oferta">
-                <h2>Oferta Académica</h2>
-                <ul>
-                    <li>
-                        Bachillerato Técnico Profesional en Administración de Empresas
-                    </li>
-                    <li>Bachillerato Técnico Profesional en Contaduría y Finanzas</li>
-                    <li>Bachillerato Técnico Profesional en Informática</li>
-                    <li>Bachillerato Técnico Profesional en Hostelería y Turismo</li>
-                    <li>Bachillerato Técnico Profesional en Mercadotecnia</li>
-                    <li>Bachillerato Técnico Profesional en Cooperativismo</li>
-                    <li>Bachillerato en Ciencias y Humanidades</li>
-                </ul>
+        </section>
+
+        <section class="section section-alt" id="oferta">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Oferta académica</span>
+                    <h2 class="section-title">Programas diseñados para liderar el futuro</h2>
+                    <p class="section-description">
+                        Nuestros bachilleratos técnicos combinan fundamentos académicos con proyectos y prácticas en empresas aliadas.
+                        Cada programa cuenta con laboratorios especializados, asesoría de expertos y certificaciones complementarias.
+                    </p>
+                </div>
+                <div class="program-grid">
+                    <article class="program-card">
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+                                alt="Estudiantes analizando gráficos financieros" loading="lazy" />
+                            <figcaption>Administración de Empresas</figcaption>
+                        </figure>
+                        <p>Enfocado en liderazgo, gestión de proyectos y emprendimiento sostenible.</p>
+                    </article>
+                    <article class="program-card">
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80"
+                                alt="Profesional revisando reportes contables" loading="lazy" />
+                            <figcaption>Contaduría y Finanzas</figcaption>
+                        </figure>
+                        <p>Preparación integral en análisis financiero, auditoría y normativa tributaria.</p>
+                    </article>
+                    <article class="program-card">
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1537432376769-00a5e6e72d6b?auto=format&fit=crop&w=900&q=80"
+                                alt="Desarrolladora trabajando en un laboratorio de informática" loading="lazy" />
+                            <figcaption>Informática</figcaption>
+                        </figure>
+                        <p>Desarrollo de software, ciberseguridad y metodologías ágiles desde el aula.</p>
+                    </article>
+                    <article class="program-card">
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&w=900&q=80"
+                                alt="Chef enseñando a estudiantes de gastronomía" loading="lazy" />
+                            <figcaption>Hostelería y Turismo</figcaption>
+                        </figure>
+                        <p>Experiencias culinarias, hotelería y gestión de destinos turísticos con enfoque sostenible.</p>
+                    </article>
+                    <article class="program-card">
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                                alt="Equipo creativo desarrollando una campaña de mercadeo" loading="lazy" />
+                            <figcaption>Mercadotecnia</figcaption>
+                        </figure>
+                        <p>Estrategias digitales, investigación de mercados y branding para nuevos productos.</p>
+                    </article>
+                    <article class="program-card">
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
+                                alt="Estudiantes realizando trabajo social" loading="lazy" />
+                            <figcaption>Cooperativismo y Ciencias y Humanidades</figcaption>
+                        </figure>
+                        <p>Compromiso social, liderazgo comunitario y bases sólidas para estudios universitarios.</p>
+                    </article>
+                </div>
             </div>
-            <div class="admisiones" id="admisiones">
-                <h2>Admisiones</h2>
-                <p>
-                    Para inscribirse en nuestro instituto, los interesados deben cumplir
-                    con los siguientes requisitos:
-                </p>
-                <ul>
-                    <li>Certificado de estudios previos</li>
-                    <li>Acta de nacimiento</li>
-                    <li>Fotografías recientes</li>
-                    <li>Formulario de inscripción completado</li>
-                </ul>
+        </section>
+
+        <section class="section" id="admisiones">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Admisiones</span>
+                    <h2 class="section-title">Comienza tu proceso de inscripción</h2>
+                    <p class="section-description">
+                        Nuestro equipo de admisiones está listo para acompañarte en cada paso. Agendamos visitas guiadas, evaluamos tu
+                        perfil académico y te brindamos orientación vocacional para que elijas el programa ideal.
+                    </p>
+                </div>
+                <div class="admissions-grid">
+                    <article class="admission-step">
+                        <span class="step-number">1</span>
+                        <h3>Preparar documentos</h3>
+                        <p>Certificado de estudios previos, acta de nacimiento, fotografías recientes y formulario de inscripción.</p>
+                    </article>
+                    <article class="admission-step">
+                        <span class="step-number">2</span>
+                        <h3>Entrevista y visita</h3>
+                        <p>Agenda una entrevista para conocer tus intereses y recorrer nuestros laboratorios y talleres especializados.</p>
+                    </article>
+                    <article class="admission-step">
+                        <span class="step-number">3</span>
+                        <h3>Inscripción oficial</h3>
+                        <p>Entrega de documentación, selección de horarios y bienvenida a la comunidad INTAE-SPS.</p>
+                    </article>
+                </div>
+                <div class="admissions-cta">
+                    <a class="btn btn-primary" href="mailto:info@intaesps.hn">Escríbenos a admisiones</a>
+                    <a class="btn btn-link" href="https://wa.me/50412345678" target="_blank" rel="noopener">Atención vía WhatsApp</a>
+                </div>
             </div>
-            <div class="noticias" id="noticias">
-                <h2>Noticias y Eventos</h2>
-                <p>
-                    Mantente informado sobre las últimas noticias y eventos en nuestro
-                    instituto. Próximamente: Feria de Empleo, Talleres de Desarrollo
-                    Profesional, y más.
-                </p>
+        </section>
+
+        <section class="section section-alt" id="noticias">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Noticias y eventos</span>
+                    <h2 class="section-title">Experiencias que marcan a nuestra comunidad</h2>
+                    <p class="section-description">
+                        Descubre lo que sucede en el campus: ferias de emprendimiento, alianzas con empresas líderes y actividades que
+                        fortalecen las habilidades de nuestros estudiantes.
+                    </p>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80"
+                                alt="Feria de empleo con estudiantes conversando con empresas" loading="lazy" />
+                        </figure>
+                        <div class="news-content">
+                            <h3>Feria de Empleo y Práctica Profesional</h3>
+                            <p>Más de 40 empresas aliadas participaron entrevistando a nuestros estudiantes para oportunidades de práctica.</p>
+                            <a class="news-link" href="#">Ver resumen</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+                                alt="Taller creativo con estudiantes diseñando" loading="lazy" />
+                        </figure>
+                        <div class="news-content">
+                            <h3>Taller de Innovación y Design Thinking</h3>
+                            <p>Docentes y facilitadores internacionales guiaron proyectos de emprendimiento social en 48 horas.</p>
+                            <a class="news-link" href="#">Conoce los proyectos</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <figure>
+                            <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=900&q=80"
+                                alt="Graduados celebrando su ceremonia" loading="lazy" />
+                        </figure>
+                        <div class="news-content">
+                            <h3>Graduación Clase 2024</h3>
+                            <p>Celebramos a una nueva generación que inicia su camino profesional con certificaciones internacionales.</p>
+                            <a class="news-link" href="#">Revive la ceremonia</a>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <div class="contacto" id="contacto">
-                <h2>Contacto</h2>
-                <p>Dirección: Avenida Principal, San Pedro Sula, Honduras</p>
-                <p>Teléfono: +504 1234-5678</p>
-                <p>Email: info@intaesps.hn</p>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container cta-container">
+                <div>
+                    <h2>¿Quieres conocer más sobre alianzas y programas corporativos?</h2>
+                    <p>Impulsamos proyectos especiales para organizaciones, programas duales y capacitación a medida. Conversemos sobre
+                        cómo podemos trabajar juntos.</p>
+                </div>
+                <a class="btn btn-light" href="mailto:alianzas@intaesps.hn">Escríbenos</a>
+            </div>
+        </section>
+
+        <section class="section" id="contacto">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Contacto</span>
+                    <h2 class="section-title">Estamos en el corazón de San Pedro Sula</h2>
+                    <p class="section-description">
+                        Visítanos en nuestro campus principal o contáctanos a través de los canales oficiales. Nuestro horario de atención es
+                        de lunes a viernes de 8:00 a.m. a 5:00 p.m.
+                    </p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Datos de contacto</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i> Avenida Principal, San Pedro Sula, Honduras</li>
+                            <li><i class="fa-solid fa-phone"></i> +504 1234-5678</li>
+                            <li><i class="fa-solid fa-envelope"></i> info@intaesps.hn</li>
+                            <li><i class="fa-brands fa-facebook"></i> /intaesps</li>
+                        </ul>
+                    </div>
+                    <div class="map-placeholder" aria-label="Mapa de ubicación">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80"
+                            alt="Vista aérea de la ciudad de San Pedro Sula" loading="lazy" />
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container">
-            <p class="mb-1">
-                © 2025 INTAE Honduras. Todos los derechos reservados.
-            </p>
-            <p class="mb-1">Tel: +504 1234-5678 | Email: info@intaesps.hn</p>
-            <div class="mt-2">
-                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <img src="Img/Logo_Intae.svg" alt="Logo INTAE" />
+                <p>© 2025 INTAE Honduras. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook INTAE"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram INTAE"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube INTAE"><i
+                        class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
     </footer>
