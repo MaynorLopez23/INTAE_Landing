@@ -1,0 +1,13 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="30" y1="20" x2="140" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0057B8" />
+      <stop offset="1" stop-color="#0F7B6C" />
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="26" fill="url(#grad)" />
+  <path d="M45 45H115L100 120H60L45 45Z" fill="white" opacity="0.12" />
+  <circle cx="80" cy="64" r="22" fill="white" opacity="0.2" />
+  <path d="M70 112V84H56L80 40L104 84H90V112H70Z" fill="#F9FAFB" />
+  <text x="80" y="134" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="22" font-weight="600" fill="#F59E0B">INTAE</text>
+</svg>
